@@ -1,18 +1,18 @@
-1. Set the Workspace Using an Environment Variable
+✅  Set the Workspace Using an Environment Variable
 -export TG_WORKSPACE=dev
 -terragrunt init
 -terragrunt plan
 -terragrunt apply
 
 
-2. Switch Workspaces
+✅  Switch Workspaces
 -export TG_WORKSPACE=test
 -terragrunt init -reconfigure   .....(Reinitialize the Terraform Backend)
 -terragrunt init -migrate-state
 -terragrunt plan
 -terragrunt apply
 
-Key Adjustments:
+✅ Key Adjustments:
 get_env() Function: Used to retrieve the workspace name from the TG_WORKSPACE environment variable.
 Dynamic Config Selection: The local.workspace is evaluated dynamically based on the environment variable.
 
